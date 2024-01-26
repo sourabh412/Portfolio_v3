@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-light: rgb(238, 238, 238);
+    --window-background: rgba(20, 20, 20, 0.9);
+    --window-height: 500px;
+    --window-width: 900px;
+    --dock-background: rgba(20, 20, 20, 0.7);
+    --dock-height: 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--font-light);
 }
+
+/* MainScreen */
+#mainscreen {
+    height: 100vh;
+    width: 100vw;
+    background: url("./assets/main_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Window */
+#window {
+    height: var(--window-height);
+    width: var(--window-width);
+    background: var(--window-background);
+    border-radius: 7px;
+    position: fixed;
+    top: calc((100% - var(--window-height)) / 2);
+    left: calc((100% - var(--window-width)) / 2);
+    box-shadow:
+        -2.1px -2.1px 15.4px rgba(0, 0, 0, 0.079),
+        -3.3px -3.3px 27.2px rgba(0, 0, 0, 0.102),
+        -3.2px -3.2px 35.8px rgba(0, 0, 0, 0.109),
+        -1.2px -1.2px 42.3px rgba(0, 0, 0, 0.109),
+        4.9px 4.9px 50.4px rgba(0, 0, 0, 0.107),
+        40px 40px 120px rgba(0, 0, 0, 0.12);
+}
+
+/* Dock */
+.Dock{
+    height: var(--dock-height);
+    background: var(--dock-background);
+    border-radius: 7px;
+    /* position: absolute; */
+    /* bottom: 10px; */
+    margin: 0 5px 0 5px;
+}
+#dock_left {
+    width: 12%;
+}
+
+#dock_mid {
+    width: 50%;
+}
+
+#dock_right {
+    width: 12%;
+}
+
+/* Appbar */
