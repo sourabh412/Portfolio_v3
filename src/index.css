@@ -32,6 +32,7 @@
     width: var(--window-width);
     background: var(--window-background);
     border-radius: 7px;
+    border: 1px solid #767676;
     position: fixed;
     top: calc((100% - var(--window-height)) / 2);
     left: calc((100% - var(--window-width)) / 2);
@@ -49,8 +50,6 @@
     height: var(--dock-height);
     background: var(--dock-background);
     border-radius: 7px;
-    /* position: absolute; */
-    /* bottom: 10px; */
     margin: 0 5px 0 5px;
 }
 #dock_left {
@@ -66,3 +65,15 @@
 }
 
 /* Appbar */
+#appbar{
+    position: fixed;
+    top: 8px;
+    left: calc((100% - 300px) / 2);
+    height: 25px;
+    width: 300px;
+    background-color: rgba(20, 20, 20, 0.67);
+    border-radius: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
